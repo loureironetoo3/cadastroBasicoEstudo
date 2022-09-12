@@ -28,6 +28,7 @@ main h1{
     color: #8880fe;
     font-size: 3rem;
     margin:2rem 0 3rem 0;
+    text-align:center;
 }
 
 main .social-media{
@@ -97,21 +98,24 @@ main form input {
 main form input[type ="submit"]{
     cursor: pointer;
     width: 50%;
-    margin-top: 4rem;
+    margin: 4rem 0;
     font-size: 1.1rem;
     background: #6c63ff;
     border: none;
     border-radius: 36px;
     color: white;
     transition: all .3s ease-in-out;
+    
 }
 main form input[type ="submit"]:hover{
     background: #5952d4;
 }
 
 section.imagem{
+    width: 50vw;
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
     padding: 4rem;
 }
 
@@ -128,6 +132,48 @@ section.imagem .circulo{
     left: 0;
     clip-path: circle(45% at right 80%);
     z-index: -1;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px){
+
+section.imagem img{
+    width: 110%;
+}
+
+section.imagem .circulo{
+ clip-path: circle(40% at right 80%);
+}
+
+}
+
+@media only screen and (max-width: 900px){
+
+section.imagem{
+    display: none;
+    visibility: hidden;
+}
+
+main {
+    width:100vw;
+}
+
+}
+
+@media only screen and (max-width: 450px){
+
+main h1 {
+    font-size:2rem;
+}
+
+main .detalhe{
+    font-size:0.8rem;
+}
+
+main form label span, main form input[type="submit"]{
+    font-size: 1rem;
+
+}
+
 }
 
 
